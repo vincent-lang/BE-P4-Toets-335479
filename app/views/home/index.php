@@ -10,7 +10,7 @@
 
 <body>
     <h3><?= $data['title']; ?></h3>
-    <a href="<?= URLROOT; ?>/leerling/index">Overzicht Afgenomen Examens Examinatoren</a>
+    <a href="<?= URLROOT; ?>/examen/index">Overzicht Afgenomen Examens Examinatoren</a>
 </body>
 
 </html>

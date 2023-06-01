@@ -9,7 +9,7 @@ class ExamenModel
         $this->db = new Database();
     }
 
-    public function getExamnes()
+    public function getExamens()
     {
         $sql = "SELECT
             Voornaam Tussenvoegsel Achternaam as Naam
