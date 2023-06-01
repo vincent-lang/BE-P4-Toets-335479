@@ -7,7 +7,7 @@ class Examen extends BaseController
 
     public function __construct()
     {
-        $this->ExamenInfo = $this->model('LeerlingModel');
+        $this->ExamenInfo = $this->model('ExamenModel');
     }
 
     public function index()
@@ -32,6 +32,6 @@ class Examen extends BaseController
             'rows' => $rows
         ];
 
-        $this->view('Leerling/index', $data);
+        $this->view('examen/index', $data);
     }
 }
