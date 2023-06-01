@@ -6,7 +6,7 @@ class Home extends BaseController
     {
 
         $data = [
-            'title' => 'Oefentoets MVC-framework'
+            'title' => 'Toets MVC-framework'
         ];
 
         $this->view('home/index', $data);
