@@ -1,6 +1,6 @@
 <?php
 
-class LeerlingModel
+class ExamenModel
 {
     private $db;
 
@@ -9,7 +9,7 @@ class LeerlingModel
         $this->db = new Database();
     }
 
-    public function getLeerlingen()
+    public function getExamnes()
     {
         $sql = "SELECT
             Voornaam
@@ -19,15 +19,14 @@ class LeerlingModel
             ,Prijs
             ,StartDatumRijlessen
             ,DatumRijbewijsBehaald
-            from Leerling as Leerl
+            from Examinator as Exami
             
-            inner join LeerlingPerLesPakket as LPLP
-            on LPLP.LeerlingId = Leerl.Id
+            inner join ExamenPerExaminator as EPE
+            on EPE.ExaminatorId = Exami.Id
 
-            inner join LesPakket as LP
-            on LPLP.LesPakketId = LP.Id
+            inner join Examen as Exam
+            on EPE.ExamenId = Exam.Id
             
-            group by Voornaam
             order by LPLP.StartDatumRijlessen asc";
 
         $this->db->query($sql);
