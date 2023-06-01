@@ -12,7 +12,7 @@ class ExamenModel
     public function getExamens()
     {
         $sql = "SELECT
-            Voornaam Tussenvoegsel Achternaam as Naam
+            Naam
             ,Datum
             ,Rijbewijscategorie
             ,Rijschool
@@ -26,7 +26,7 @@ class ExamenModel
             inner join Examen as Exam
             on EPE.ExamenId = Exam.Id
             
-            order by Exami.Naam desc";
+            order by Exami.Naam asc";
 
         $this->db->query($sql);
         return $this->db->resultSet();

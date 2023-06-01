@@ -52,9 +52,7 @@ CONSTRAINT      PK_Examen_Id   PRIMARY KEY CLUSTERED(Id)
 drop table if exists Examinator;
 create table if not exists Examinator (
 Id TINYINT UNSIGNED not null auto_increment,
-Voornaam varchar(30) not null,
-Tussenvoegsel varchar(20) null,
-Achternaam varchar(30) not null,
+Naam varchar(30) not null,
 Mobiel varchar(30) not null,
 IsActief bit not null default 1,
 OpMerkingen varchar(250) null default null,
@@ -116,14 +114,14 @@ VALUES (null, '124444', 'RijlesVoorJou', 'Rotterdam', 'B', '2023-04-12', 'Geslaa
 --  01            01-06-2023      Vincent van de Merwe            new          
 -- =============================================================================
 
-INSERT INTO Examinator (Id,Voornaam,Tussenvoegsel,Achternaam,Mobiel,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
-VALUES (null, 'Manuel', 'van', 'Meerkeren', '06-28493823', 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO Examinator (Id,Voornaam,Tussenvoegsel,Achternaam,Mobiel,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
-VALUES (null, 'Lissette', 'den', 'Dongen', '06-24383299', 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO Examinator (Id,Voornaam,Tussenvoegsel,Achternaam,Mobiel,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
-VALUES (null, 'Jurswailly', null, 'Luciano', '06-48293846', 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO Examinator (Id,Voornaam,Tussenvoegsel,Achternaam,Mobiel,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
-VALUES (null, 'Naswha', null, 'Salawi', '06-34291219', 1, NULL, SYSDATE(6), SYSDATE(6));
+INSERT INTO Examinator (Id,Naam,Mobiel,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+VALUES (null, 'Manuel van Meerkeren', '06-28493823', 1, NULL, SYSDATE(6), SYSDATE(6));
+INSERT INTO Examinator (Id,Naam,Mobiel,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+VALUES (null, 'Lissette den Dongen', '06-24383299', 1, NULL, SYSDATE(6), SYSDATE(6));
+INSERT INTO Examinator (Id,Naam,Mobiel,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+VALUES (null, 'Jurswailly Luciano', '06-48293846', 1, NULL, SYSDATE(6), SYSDATE(6));
+INSERT INTO Examinator (Id,Naam,Mobiel,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+VALUES (null, 'Naswha Salawi', '06-34291219', 1, NULL, SYSDATE(6), SYSDATE(6));
 
 -- Step: 07
 -- Goal: insert info in the table ExamenPerExaminator

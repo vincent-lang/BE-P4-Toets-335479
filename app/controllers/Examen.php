@@ -17,13 +17,12 @@ class Examen extends BaseController
         $rows = '';
         foreach ($examen as $result) {
             $rows .= "<tr>
-                        <td>$result->Voornaam</td>
-                        <td>$result->Mobiel</td>
-                        <td>$result->PakketNaam</td>
-                        <td>$result->AantalLessen</td>
-                        <td>$result->Prijs</td>
-                        <td>$result->StartDatumRijlessen</td>
-                        <td>$result->DatumRijbewijsBehaald</td>
+                        <td>$result->Naam</td>
+                        <td>$result->Datum</td>
+                        <td>$result->Rijbewijscategorie</td>
+                        <td>$result->Rijschool</td>
+                        <td>$result->Stad</td>
+                        <td>$result->Uitslag</td>
                     </tr>";
         }
 
