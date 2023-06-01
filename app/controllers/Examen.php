@@ -1,21 +1,21 @@
 <?php
 
-class Leerling extends BaseController
+class Examen extends BaseController
 {
 
-    private $RijLesPakkettenInfo;
+    private $ExamenInfo;
 
     public function __construct()
     {
-        $this->RijLesPakkettenInfo = $this->model('LeerlingModel');
+        $this->ExamenInfo = $this->model('LeerlingModel');
     }
 
     public function index()
     {
-        $Leerlingen = $this->RijLesPakkettenInfo->getLeerlingen();
+        $examen = $this->ExamenInfo->getExamens();
 
         $rows = '';
-        foreach ($Leerlingen as $result) {
+        foreach ($examen as $result) {
             $rows .= "<tr>
                         <td>$result->Voornaam</td>
                         <td>$result->Mobiel</td>
@@ -28,7 +28,7 @@ class Leerling extends BaseController
         }
 
         $data = [
-            'title' => 'Overzicht Rijlespakketten Leerlingen',
+            'title' => 'Overzicht Afgenomen Examens Examinatoren',
             'rows' => $rows
         ];
 
