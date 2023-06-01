@@ -11,13 +11,12 @@
     <h3><?= $data['title']; ?></h3>
     <table>
         <thead>
-            <th>Naam</th>
-            <th>Mobiel</th>
-            <th>Pakket Naam</th>
-            <th>Aantal Lessen</th>
-            <th>Prijs</th>
-            <th>Start Datum</th>
-            <th>Datum Rijbewijs Behaald</th>
+            <th>Naam Examinator</th>
+            <th>Datum Examen</th>
+            <th>Rijbewijs categorie</th>
+            <th>Rijschool</th>
+            <th>Stad</th>
+            <th>Uitslag Examen</th>
         </thead>
         <tbody>
             <?= $data['rows'];  ?>
