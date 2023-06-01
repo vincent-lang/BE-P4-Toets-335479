@@ -12,13 +12,12 @@ class ExamenModel
     public function getExamnes()
     {
         $sql = "SELECT
-            Voornaam
-            ,Mobiel
-            ,PakketNaam
-            ,AantalLessen
-            ,Prijs
-            ,StartDatumRijlessen
-            ,DatumRijbewijsBehaald
+            Voornaam Tussenvoegsel Achternaam as Naam
+            ,Datum
+            ,Rijbewijscategorie
+            ,Rijschool
+            ,Stad
+            ,Uitslag
             from Examinator as Exami
             
             inner join ExamenPerExaminator as EPE
@@ -27,7 +26,7 @@ class ExamenModel
             inner join Examen as Exam
             on EPE.ExamenId = Exam.Id
             
-            order by LPLP.StartDatumRijlessen asc";
+            order by Exami.Naam desc";
 
         $this->db->query($sql);
         return $this->db->resultSet();
